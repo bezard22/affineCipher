@@ -1,0 +1,27 @@
+<section>
+    <div>
+        <label for="alpha">Alphabet: </label>
+        <input type="text" id="alpha" name="alpha" onchange="ciph.alphaUpdate()">
+        <label for="actionSelect"> Action: </label>
+        <select id="actionSelect" name="actionSelect" onchange="ciph.actionUpdate()">
+            <option value="encrypt">encrypt</option>
+            <option value="decrypt">decrypt</option>
+        </select>
+
+        <label for="keyA">Key-a: </label>
+        <input type="text" name="keyA" id="keyA" onchange="ciph.keyUpdate()">
+        <label for="keyB">Key-b: </label>
+        <input type="text" name="keyB" id="keyB" onchange="ciph.keyUpdate()">
+    </div>
+    <div>
+        <label for="text" id="textLabel"></label>
+        <br>
+        <textarea name="text" id="text" rows="10"></textarea>
+        <button id="action" onclick="ciph.cryption()"></button>
+    </div>
+    <div id="output"></div>
+</section>
+<hr>
+<section>
+    <p>Explanation</p>
+</section>
