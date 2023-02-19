@@ -1,16 +1,40 @@
 <section>
     <div>
-        <label for="alpha">Alphabet: </label>
+        <label for="alpha">Alphabet<math>
+            <mo>(</mo>
+            <mi>&alpha;</mi>
+            <mo>)</mo>
+        </math>: </label>
         <input type="text" id="alpha" name="alpha" onchange="ciph.alphaUpdate()">
+        
         <label for="actionSelect"> Action: </label>
         <select id="actionSelect" name="actionSelect" onchange="ciph.actionUpdate()">
-            <option value="encrypt">encrypt</option>
-            <option value="decrypt">decrypt</option>
+            <option value="encrypt">encrypt<math>
+                <mi>e</mi>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+            </math></option>
+            <option value="decrypt">decrypt<math>
+                <mi>d</mi>
+                <mo>(</mo>
+                <mi>y</mi>
+                <mo>)</mo>
+            </math></option>
         </select>
 
-        <label for="keyA">Key-a: </label>
+        <label for="keyA">Key<math>
+            <mo>(</mo>
+            <mi>a</mi>
+            <mo>)</mo>
+        </math>: </label>
         <input type="text" name="keyA" id="keyA" onchange="ciph.keyUpdate()">
-        <label for="keyB">Key-b: </label>
+        
+        <label for="keyB">Key<math>
+            <mo>(</mo>
+            <mi>b</mi>
+            <mo>)</mo>
+        </math>: </label>
         <input type="text" name="keyB" id="keyB" onchange="ciph.keyUpdate()">
     </div>
     <div>
@@ -23,5 +47,143 @@
 </section>
 <hr>
 <section>
-    <p>Explanation</p>
+    <table>
+        <tr>
+            <th colspan="2">Definition</th>
+        </tr>
+        <tr>
+            <td><math><mi>x</mi></math></td>
+            <td>Plaintext</td>
+        </tr>
+        <tr>
+            <td><math><mi>y</mi></math></td>
+            <td>Ciphertext</td>
+        </tr>
+        <tr>
+            <td><math><mi>&alpha;</mi></math></td>
+            <td>alphabet</td>
+        </tr>
+        <tr>
+            <td><math><mi>a</mi></math></td>
+            <td>key component a</td>
+        </tr>
+        <tr>
+            <td><math><mi>b</mi></math></td>
+            <td>key component b</td>
+        </tr>
+        <tr>
+            <td><math><msup><mi>a</mi> <mn>-1</mn></msup></math></td>
+            <td>mod inverse of key component a</td>
+        </tr>
+        <tr>
+            <td><math>
+                <mi>len</mi>
+                <mo>(</mo>
+                <mi>&alpha;</mi>
+                <mo>)</mo>
+            </math></td>
+            <td>length of alphabet</td>
+        </tr>
+        <tr>
+            <td><math>
+                <mi>e</mi>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+            </math></td>
+            <td>Encryption</td>
+        </tr>
+        <tr>
+            <td><math>
+                <mi>d</mi>
+                <mo>(</mo>
+                <mi>y</mi>
+                <mo>)</mo>
+            </math></td>
+            <td>Decryption</td>
+        </tr>
+        <tr>
+            <td colspan="2"><math>
+                <mi>e</mi>
+                <mo>(</mo>
+                <mi>x</mi>
+                <mo>)</mo>
+                <mo>&equals;</mo>
+                <mi>y</mi>
+                <mo>&Congruent;</mo>
+                <mi>a</mi>
+                <mo>&sdot;</mo>
+                <mi>x</mi>
+                <mo>&plus;</mo>
+                <mi>b</mi>
+                <mo>mod</mo>
+                <mi>len</mi>
+                <mo>(</mo>
+                <mi>&alpha;</mi>
+                <mo>)</mo>
+            </math></td>
+        </tr>
+        <tr>
+            <td colspan="2"><math>
+                <mi>d</mi>
+                <mo>(</mo>
+                <mi>y</mi>
+                <mo>)</mo>
+                <mo>&equals;</mo>
+                <mi>x</mi>
+                <mo>&Congruent;</mo>
+                <msup><mi>a</mi> <mn>-1</mn></msup>
+                <mo>&sdot;</mo>
+                <mo>(</mo>
+                <mi>y</mi>
+                <mo>&minus;</mo>
+                <mi>b</mi>
+                <mo>)</mo>
+                <mo>mod</mo>
+                <mi>len</mi>
+                <mo>(</mo>
+                <mi>&alpha;</mi>
+                <mo>)</mo>
+            </math></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <th>Given</th>
+        </tr>
+        <tr>
+            <td><math>
+                <mi>x</mi>
+                <mo>&equals;</mo>
+                <mi>hello</mi>
+            </math></td>
+        </tr>
+        <tr>
+            <td><math>
+                <mi>&alpha;</mi>
+                <mo>&equals;</mo>
+                <mi>abcdefghijklmnopqrstuvwxyz</mi>
+            </math></td>
+        </tr>
+        <tr>
+            <td><math>
+                <mi>a</mi>
+                <mo>&equals;</mo>
+                <mi>7</mi>
+            </math></td>
+        </tr>
+        <tr>
+            <td><math>
+                <mi>b</mi>
+                <mo>&equals;</mo>
+                <mi>22</mi>
+            </math></td>
+        </tr>
+        <tr>
+            <th>Calculation</th>
+        </tr>
+    </table>
 </section>
