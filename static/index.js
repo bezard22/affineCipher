@@ -30,14 +30,24 @@ class cipher {
         this.action = d3.select("#actionSelect").property("value");
         if (this.action == "encrypt") {
             d3.select("#textLabel")
+                .attr("class", null)
+                .classed("plain", true)
                 .text("PLaintext: ");
             d3.select("#action")
                 .text("Encrypt");
+            d3.select("#text")
+                .attr("class", null)
+                .classed("plain", true);
         } else if (this.action == "decrypt") {
             d3.select("#textLabel")
+                .attr("class", null)
+                .classed("cipher", true)
                 .text("Ciphertext: ");
             d3.select("#action")
                 .text("Decrypt");
+            d3.select("#text")
+                .attr("class", null)
+                .classed("cipher", true);
         }
     }
 
